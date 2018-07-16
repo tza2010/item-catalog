@@ -1,0 +1,24 @@
+<div class="row top-menu">
+	<div class="col-md-6">
+		<a href="{{url_for('showHome')}}">
+			<span class="glyphicon glyphicon-home" aria-hidden="true"></span>Show All Categories
+		</a>
+	</div>
+{% if user %}
+	<div class="col-md-6 text-right" >
+					<p><a href="/disconnect">logout from {{ user.name }}</a>
+					</p><figure class="creator">
+							<img max-height="100" max-width="100" src="{{ user.picture }}">
+
+						</figure>
+
+	</div>
+
+{% else %}
+
+<div class="col-md-6 text-right">
+	<a href="/login">Log in </a>
+</div>
+
+{% endif %}
+</div>
