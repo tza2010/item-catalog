@@ -526,7 +526,7 @@ def deleteItem(cat_id, item_id):
         flash('Menu Item Successfully Deleted')
         return redirect(url_for('showMenu', cat_id=cat_id))
     else:
-        return render_template('deleteItem.html', item=itemToDelete,
+        return render_template('deleteitem.html', item=itemToDelete,
                                user=getUserInfo(login_session['user_id']))
 
 
